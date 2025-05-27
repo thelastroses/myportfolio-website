@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --text: #171717;
+  --slides: #b99a6c;
+  --button-bg: #a0947b;
+  --navbar-bg: #a6a8a3;
   --foreground: #171717;
-}
-
-@theme inline {
+  --img: url('/zetong-li-Uu1MoLHczCo-unsplash.jpg');
+  --gradient: linear-gradient(180deg, #a6a8a3 0%, #eedabe 100%);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.gradient-bg {
+  background: var(--gradient);
 }
 
-body {
+
+  .dark {
+    --text: white;
+    --slides: #445e3c;
+    --button-bg: #242f21;
+    --foreground: #ededed;
+    --navbar-bg: #1a2615;
+    --img: url('/suhyeon-choi-HCDugQDdtfc-unsplash.jpg');
+    --gradient: linear-gradient(180deg, #1a2615 0%, #5f7657 100%);
+  }
+
+.body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
+
+.top-btn-position {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.top-btn-style {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.top-btn-style:hover {
+  background-color: var(--navbar-bg);
+}
+
