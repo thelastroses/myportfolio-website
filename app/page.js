@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div ref={(gallery)} className="container mx-auto px-8 flex gap-8 p-8 items-center justify-center">
             <h2 className="pb-4 text-6xl font-[family-name:var(--font-geist-mono)] whitespace-nowrap">
-              Gallery 
+              Gallery Testt
             </h2>
           </div>
           <div>
