@@ -7,8 +7,9 @@
   --button-bg: #a0947b;
   --navbar-bg: #a6a8a3;
   --foreground: #171717;
-  --img: url('/zetong-li-Uu1MoLHczCo-unsplash.jpg');
+  --img: url('/zetong-li-Uu1MoLHczCo-unsplash.webp');
   --gradient: linear-gradient(180deg, #a6a8a3 0%, #eedabe 100%);
+  --background-overlay: rgba(166,168,163,0.5);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -19,15 +20,15 @@
   background: var(--gradient);
 }
 
-
   .dark {
     --text: white;
     --slides: #445e3c;
     --button-bg: #242f21;
     --foreground: #ededed;
     --navbar-bg: #1a2615;
-    --img: url('/suhyeon-choi-HCDugQDdtfc-unsplash.jpg');
+    --img: url('/suhyeon-choi-HCDugQDdtfc-unsplash.webp');
     --gradient: linear-gradient(180deg, #1a2615 0%, #5f7657 100%);
+    --background-overlay: rgba(26,38,21,0.5);
   }
 
 .body {
@@ -53,3 +54,16 @@
   background-color: var(--navbar-bg);
 }
 
+.gallery-btn:hover {
+  background-color: #10170d;
+}
+
+
+
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .static-text {
+  font-size: 60px;
+}

@@ -14,23 +14,23 @@ const ContactComponent = () => {
 
   return (
     <div className="gap-8  flex flex-col items-center ">
-        <h2 className="pb-4 text-6xl font-[family-name:var(--font-geist-mono)] whitespace-nowrap">
+        <h2 className="font-bold pb-4 text-6xl font-[family-name:var(--font-geist-mono)] whitespace-nowrap">
             Contact
         </h2>            
     <div className="rounded-[20] flex justify-center h-125 w-125" style={{ background: "var(--slides)" }}>
         <div className="flex flex-col gap-6 items-center justify-center text-center">
             <ul className="text-2xl">
-            <li className="pb-4 hover:text-gray-400">
+            <li className="pb-10 hover:text-gray-400">
             <Link className="flex items-center gap-2" href="mailto:jspencer0709@gmail.com">
             {theme === "dark" ? (
-                <img className="w-10 filter invert brightness-e" src="/tbGmailLogo.png" />
+                <img className="w-10 filter invert brightness-e" src="/tbGmailLogo.webp" />
             ) : (
-                <img className="w-10" src="/tbGmailLogo.png" />
+                <img className="w-10" src="/tbGmailLogo.webp" />
             )}
               Mail
             </Link>
             </li>
-            <li className="pb-4 hover:text-gray-400">
+            <li className="pb-10 hover:text-gray-400">
             <Link className="flex items-center gap-2" href="https://github.com/thelastroses">
             {theme === "dark" ? (
                 <img className="w-10 filter invert brightness-e" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
@@ -40,7 +40,7 @@ const ContactComponent = () => {
               GitHub
             </Link>
             </li>
-            <li className="pb-4 hover:text-gray-400">
+            <li className="pb-10 hover:text-gray-400">
             <Link className="flex items-center gap-2" href="https://www.linkedin.com/in/jennifer-spencer-718414285">
             {theme === "dark" ? (
                 <img className="w-10 filter invert brightness-e" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
@@ -53,9 +53,9 @@ const ContactComponent = () => {
             <li className="hover:text-gray-400">
             <div  className="flex items-center gap-2">
             {theme === "dark" ? (
-                <img className="w-10 filter invert brightness-e" src="/tbArtStationLogo.png" />
+                <img className="w-10 filter invert brightness-e" src="/tbArtStationLogo.webp" />
             ) : (
-                <img className="w-10" src="/tbArtStationLogo.png" />
+                <img className="w-10" src="/tbArtStationLogo.webp" />
             )}
               ArtStation
             </div>

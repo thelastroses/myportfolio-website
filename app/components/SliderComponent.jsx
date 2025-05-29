@@ -11,23 +11,23 @@ const slides = [
     title: "Connect 4",
     content: "A Connect 4 game built with Unity and C#, during Coding II class",
     href: "https://github.com/thelastroses/Connect4",
-    image: "/Connect 4.png",
+    image: "/Connect 4.webp",
   },
   {
     title: "Dugeon Crawler",
     content: "A dungeon crawler game built with Unity and C#, during Coding I class",
     href: "https://github.com/thelastroses/DungeonCrawler",
-    image: "/Dugeon Crawler.png",
+    image: "/Dugeon Crawler.webp",
   },
   {
     title: "Rollaball",
     content: "A Rollaball game following unity tutorial, built with Unity and C#, during Coding I class",
-    image: "/Rollaball.png",
+    image: "/Rollaball.webp",
   },
   {
     title: "To Do List",
     content: "This section is under construction... A personal To Do List app built",
-    image: "/Under Construction.jpg",
+    image: "/Under Construction.webp",
   },
 ];
 

@@ -4,16 +4,16 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 const images = [
-  { src: "/jinx.jpg"},
-  { src: "/girl_gojo.jpg"},
-  { src: "/gray.jpg"},
-  { src: "/spicy.jpg"},
-  { src: "/jennie.jpg"},
-  { src: "/wtf_going_on (1).jpg"},
-  { src: "/candle.jpg"},
-  { src: "/classy (1).jpg"},
-  { src: "/tiger.jpg"},
-  { src: "/doggy.jpg"},
+  { src: "/jinx.webp"},
+  { src: "/girl_gojo.webp"},
+  { src: "/gray.webp"},
+  { src: "/spicy.webp"},
+  { src: "/jennie.webp"},
+  { src: "/wtf_going_on (1).webp"},
+  { src: "/candle.webp"},
+  { src: "/classy (1).webp"},
+  { src: "/tiger.webp"},
+  { src: "/doggy.webp"},
 ];
 
 const THUMBNAILS_VISIBLE = 5;
@@ -45,11 +45,11 @@ const GalleryComponent = () => {
     
     <div className="rounded-[20] w-full max-w-lg mx-auto flex flex-col items-center">
       {/* Large preview */}
-      <div className="mb-6 w-full flex justify-center">
+      <div className="rounded-[20] mb-6 flex justify-center">
         <img
           src={images[selected].src}
           alt={`Gallery image ${selected + 5}`}
-          className="rounded-lg object-contain max-h-150 w-full"
+          className="rounded-[20] object-contain max-h-150 w-full"
         />
       </div>
       {/* Thumbnails with arrows */}
@@ -76,7 +76,7 @@ const GalleryComponent = () => {
               <button
                 key={realIdx}
                 onClick={() => setSelected(realIdx)}
-                className={`border-2 rounded-lg p-1 transition-all ${
+                className={`border-2 rounded-[20] p-1 transition-all ${
                   realIdx === selected ? "border-white" : "border-transparent"
                 }`}
                 aria-label={`Show image ${realIdx + 5}`}
@@ -85,7 +85,7 @@ const GalleryComponent = () => {
                 <img
                   src={img.src}
                   alt={`Thumbnail ${realIdx + 5}`}
-                  className="w-24 h-24 object-cover rounded"
+                  className="w-24 h-24 object-cover rounded-[20]"
                 />
               </button>
             );
@@ -98,9 +98,9 @@ const GalleryComponent = () => {
             aria-label="Scroll thumbnails right"
           >
             {theme === "dark" ? (
-              <img src="/caret-right.svg" alt="Right" className="w-6 h-6 filter invert brightness-200 transition-all duration-500" style={{ cursor: "pointer" }}/>
+              <img src="/caret-right.svg" alt="Right" className="w-6 h-6 filter invert brightness-200 border-radius: 50% gallery-btn:hover transition-all duration-500" style={{ cursor: "pointer" }}/>
             ) : (
-              <img src="/caret-right.svg" alt="Right" className="w-6 h-6 transition-all duration-500" style={{ cursor: "pointer" }}/>
+              <img src="/caret-right.svg" alt="Right" className="w-6 h-6 transition-all duration-500 border-radius: 50% gallery-btn:hover" style={{ cursor: "pointer" }}/>
             )}
           </button>
         )}
