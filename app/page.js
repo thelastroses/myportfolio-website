@@ -8,6 +8,7 @@ import GalleryComponent from "./components/GalleryComponent";
 import ContactComponent from "./components/ContactComponent";
 import Link from "next/link";
 import './TextAnimation.css';
+import ImageContactComponent from "./components/ImageContactComponent";
 
 export default function Home() {
   const about = useRef(null);
@@ -26,9 +27,7 @@ export default function Home() {
 
       <div >
         <div className="relative w-full h-[80vh] bg-cover bg-center transition-all duration-500" style={{ backgroundImage: "var(--img)" }}>
-  {/* Transparent green overlay on the left side */}
   <div className="absolute h-full w-3/5 z-10" style={{background: "var(--background-overlay"}}></div>
-  {/* Text content above the overlay */}
   <div className="relative z-20 flex flex-col justify-center h-full pl-40">
     <h1 className="text-white text-6xl font-bold">Jennifer Spencer</h1>
     <div className="text-animation pt-4">
@@ -49,7 +48,7 @@ export default function Home() {
             <h2 className="font-bold text-6xl ld:text-6xl font-[family-name:var(--font-geist-mono)] whitespace-nowrap mb-4 ld:mb-0 ld:mr-8 mt-8">
               About
             </h2>
-            <p className="md:pl-24 font-[family-name:var(--font-geist-mono)]">Hello, I am Jennifer Spencer, a Computer Science enthusiast with a passion for game development and digital art! 
+            <p className="md:pl-24 font-[family-name:var(--font-geist-mono)]">Hello, I am Jennifer Spencer! A Computer Science enthusiast with a passion for game development and digital art! 
               I graduate from Concordia University of Wisconsin in 2027 with a Bachelors Degree in Computer Science.
               The goal of this website is to showcase my coding projects and artworks.</p>
           </div> 
@@ -67,13 +66,25 @@ export default function Home() {
             </h2>
           </div>
           <div>
-            <div className="h-203 pt-10" style={{ background: "var(--navbar-bg)" }}>
-            <GalleryComponent/>
+            
+            <div className="h-250 pt-15" style={{ background: "var(--navbar-bg)" }}>
+              <div className="flex justify-center "><img
+              className="w-auto h-189 duration-500"
+                src="/46708ff6-ba65-42a1-8147-0a4ae1f1229a.png" 
+              style={{
+                position: 'absolute',
+                zIndex: 3, 
+        }}
+      />
+            <GalleryComponent /></div>
             </div>
           </div>
-          <div ref={(contact)} className="container mx-auto px-8 flex gap-8 p-8 pt-60 pb-50 md:pr-40 pr-20 justify-end">
-            <ContactComponent />         
+          <div className="pb-30"></div>
+          <div ref={(contact)} className="container mx-auto px-8 flex gap-8 p-8 pt-30 pb-45 md:pr-40 pr-20 justify-end ">
+            <ImageContactComponent/>
+            <ContactComponent /> 
         </div>
+        
         </div>
       </div>
     </>

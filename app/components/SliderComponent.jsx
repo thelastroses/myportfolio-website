@@ -26,7 +26,7 @@ const slides = [
   },
   {
     title: "To Do List",
-    content: "This section is under construction... A personal To Do List app built",
+    content: "This section is under construction... A personal To Do List app built with...",
     image: "/Under Construction.webp",
   },
 ];
@@ -41,21 +41,22 @@ const SliderComponent = () => {
     <div className="text-center">
     <div className="mb-6 flex justify-center">
       {slides.slice(0, 4).map((slide, idx) => (
-        <button
-          key={slide.title}
-          className={
-            "w-50 h-15 hover:text-gray-400 " +
+        <div key={slide.title} id="myProjectButton" className={
             (idx === 0
               ? "rounded-l-[20px]"
               : idx === 3
               ? "rounded-r-[20px]"
               : "")
-          }
-          style={{ background: "var(--button-bg)", cursor: "pointer"}}
+          }>
+        <div >
+        <button
+          key={slide.title}
+          className="w-50 h-15" 
+          style={{ cursor: "pointer"}}
           onClick={() => slider.current?.moveToIdx(idx-1)}
         >
           {slide.title}
-        </button>
+        </button></div></div>
       ))}
     </div>
     <div ref={sliderRef} className="keen-slider max-w-300 h-100 mx-auto">
@@ -66,10 +67,10 @@ const SliderComponent = () => {
         >
           {slide.href ? (
             <Link href={slide.href} target="_blank" rel="noopener noreferrer">
-              <img className="h-50" src={slide.image} alt={slide.title} style={{ cursor: "pointer" }} />
+              <img id="image-style" className="h-50 rounded-[20]" src={slide.image} alt={slide.title} style={{ cursor: "pointer" }} />
             </Link>
           ) : (
-              <img className="h-50" src={slide.image} alt={slide.title} />
+              <img className="h-50 rounded-[20]" src={slide.image} alt={slide.title} />
           )}
           <h2 className="pt-5 text-2xl font-bold mb-2">{slide.title}</h2>
           <p className="mb-4">{slide.content}</p>

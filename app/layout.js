@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import Providers from "./providers";
 import ScrollToTop from "./components/ScrollToTop"; 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,10 +18,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "My Next.js App",
+  title: "Jennifer Spencer's Portfolio",
   description: "Personal portfolio built with Next.js",
   keywords: "Next.js, React, JavaScript",
-  author:"Jennifer Spencer"
+  author:"Jennifer Spencer",
+  icons: {
+    icon: [
+      {
+        url: '/f1b06321-424d-49cb-a5d9-e26abbcace0b.jpg',
+        href: '/f1b06321-424d-49cb-a5d9-e26abbcace0b.jpg',
+      },
+      
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

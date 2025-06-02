@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Georgia', sans-serif;
 }
 
 .text-animation {
@@ -29,7 +29,7 @@
 }
 
 .dynamic-txts li {
-  color: #d5b37f;
+  color: #eaba74;
   font-size: 30px;
   font-weight: 500;
   position: absolute;

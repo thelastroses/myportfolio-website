@@ -4,13 +4,14 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 const images = [
+  { src: "/spicy.webp"},{ src: "/jennie.webp"},
   { src: "/jinx.webp"},
   { src: "/girl_gojo.webp"},
   { src: "/gray.webp"},
-  { src: "/spicy.webp"},
-  { src: "/jennie.webp"},
-  { src: "/wtf_going_on (1).webp"},
-  { src: "/candle.webp"},
+  
+  
+  
+  { src: "/wtf_going_on (1).webp"},{ src: "/candle.webp"},
   { src: "/classy (1).webp"},
   { src: "/tiger.webp"},
   { src: "/doggy.webp"},
@@ -43,22 +44,24 @@ const GalleryComponent = () => {
 
   return (
     
-    <div className="rounded-[20] w-full max-w-lg mx-auto flex flex-col items-center">
-      {/* Large preview */}
-      <div className="rounded-[20] mb-6 flex justify-center">
+    <div className="pt-38 w-full max-w-lg mx-auto flex flex-col items-center " style={{
+                position: 'absolute',
+                zIndex: 2,
+        }}>
+      <div className=" mb-6 flex justify-center">
         <img
           src={images[selected].src}
           alt={`Gallery image ${selected + 5}`}
-          className="rounded-[20] object-contain max-h-150 w-full"
+          className="object-contain max-h-115 w-full"
         />
       </div>
-      {/* Thumbnails with arrows */}
-      <div className="flex items-center gap-2">
+      <div className="pt-29 flex items-center gap-2">
         {images.length > THUMBNAILS_VISIBLE && canScrollLeft && (
           <button
             onClick={() => setThumbStart(thumbStart - 5)}
             className="p-1"
             aria-label="Scroll thumbnails left"
+            id="myGalleryButton"
           >
             
       {theme === "dark" ? (
@@ -70,7 +73,6 @@ const GalleryComponent = () => {
         )}
         <div className="flex gap-4 overflow-x-auto">
           {visibleThumbs.map((img, idx) => {
-            // idx is relative to visibleThumbs, so get the real index:
             const realIdx = thumbStart + idx;
             return (
               <button
@@ -85,7 +87,7 @@ const GalleryComponent = () => {
                 <img
                   src={img.src}
                   alt={`Thumbnail ${realIdx + 5}`}
-                  className="w-24 h-24 object-cover rounded-[20]"
+                  className="w-auto h-20 object-cover rounded-[20]"
                 />
               </button>
             );
@@ -96,6 +98,7 @@ const GalleryComponent = () => {
             onClick={() => setThumbStart(thumbStart + 5)}
             className="p-1"
             aria-label="Scroll thumbnails right"
+            id="myGalleryButton"
           >
             {theme === "dark" ? (
               <img src="/caret-right.svg" alt="Right" className="w-6 h-6 filter invert brightness-200 border-radius: 50% gallery-btn:hover transition-all duration-500" style={{ cursor: "pointer" }}/>
