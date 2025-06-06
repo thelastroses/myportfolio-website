@@ -4,14 +4,13 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 const images = [
-  { src: "/spicy.webp"},{ src: "/jennie.webp"},
+  { src: "/spicy.webp"},
+  { src: "/jennie.webp"},
   { src: "/jinx.webp"},
   { src: "/girl_gojo.webp"},
   { src: "/gray.webp"},
-  
-  
-  
-  { src: "/wtf_going_on (1).webp"},{ src: "/candle.webp"},
+  { src: "/wtf_going_on (1).webp"},
+  { src: "/candle.webp"},
   { src: "/classy (1).webp"},
   { src: "/tiger.webp"},
   { src: "/doggy.webp"},
